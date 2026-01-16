@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLINK | Book 1 of the Eternity Thread Saga | Awasen Oe</title>
+    <meta name="description" content="The most dangerous prisons are the ones you can't see. A high fantasy novel about discovery, realization, and the choice of hard freedom.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2043859');
+    </script>
+    <!-- End MailerLite Universal -->
+    
+    <style>
+        :root {
+            --black: #0a0a0b;
+            --dark: #121215;
+            --pink: #e8a0a0;
+            --coral: #d4736c;
+            --blue: #4a9ead;
+            --cream: #f0ebe3;
+            --gold: #c9a959;
+            --text: #d4d4d8;
+            --text-muted: #71717a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Crimson Pro', Georgia, serif;
+            background-color: var(--black);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 18px;
+            overflow-x: hidden;
+        }
+        
+        /* Subtle grain overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .hero-image-container {
+            width: 100%;
+            max-height: 70vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        
+        .hero-image-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, var(--black), transparent);
+        }
+        
+        .hero-content {
+            padding: 3rem 2rem 4rem;
+            text-align: center;
+            max-width: 800px;
+            margin: -4rem auto 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .tagline {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            font-style: italic;
+            color: var(--pink);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+        
+        .tagline:last-of-type {
+            margin-bottom: 2rem;
+        }
+        
+        .book-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 2.5rem;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--coral), var(--pink));
+            color: var(--black);
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.1rem 3rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(212, 115, 108, 0.3);
+        }
+        
+        .cta-price {
+            display: block;
+            font-family: 'Crimson Pro', serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-top: 0.3rem;
+            opacity: 0.8;
+        }
+        
+        /* Signup Section */
+        .signup-section {
+            background: var(--dark);
+            padding: 5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .signup-section h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+        
+        .signup-section p {
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+        
+        .ml-embedded {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        /* Formats Section */
+        .formats-section {
+            padding: 6rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .formats-section h2 {
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+        
+        .formats-intro {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        .formats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .format-card {
+            background: var(--dark);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .format-card:hover {
+            border-color: rgba(232, 160, 160, 0.2);
+            transform: translateY(-4px);
+        }
+        
+        .format-card.featured {
+            border-color: var(--gold);
+        }
+        
+        .format-card.featured::before {
+            content: 'LIMITED — 50 COPIES';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--gold);
+            color: var(--black);
+            font-family: 'Cinzel', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            padding: 0.4rem 1rem;
+        }
+        
+        .format-tier {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .format-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+        
+        .format-price {
+            font-size: 1.8rem;
+            color: var(--pink);
+            margin-bottom: 1rem;
+        }
+        
+        .format-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            min-height: 3rem;
+        }
+        
+        .format-link {
+            display: inline-block;
+            color: var(--cream);
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--cream);
+            transition: all 0.3s ease;
+        }
+        
+        .format-link:hover {
+            background: var(--cream);
+            color: var(--black);
+        }
+        
+        /* About Section */
+        .about-section {
+            background: var(--dark);
+            padding: 5rem 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-section h2 {
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        footer a {
+            color: var(--pink);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero-content {
+                padding: 2rem 1.5rem 3rem;
+            }
+            
+            .cta-primary {
+                padding: 1rem 2rem;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .formats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .format-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-content {
+            animation: fadeUp 1s ease-out;
+        }
+        
+        .tagline:nth-child(1) { animation-delay: 0.2s; }
+        .tagline:nth-child(2) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-image-container">
+            <!-- REPLACE: Save your BLINK promo image as "hero.jpg" in the same folder -->
+            <img src="hero.jpg" alt="BLINK - Book 1 of the Eternity Thread Saga" class="hero-image">
+        </div>
+        
+        <div class="hero-content">
+            <p class="tagline">The most dangerous prisons are the ones you can't see.</p>
+            <p class="tagline">The most beautiful lies are the ones you never question.</p>
+            
+            <p class="book-meta">Book One of the Eternity Thread Saga</p>
+            
+            <a href="https://awasen.gumroad.com/l/blink-pre" class="cta-primary">
+                Preorder Now
+                <span class="cta-price">$2.99 — Price increases at launch</span>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Email Signup -->
+    <section class="signup-section">
+        <h2>Get Notified</h2>
+        <p>Be the first to know when BLINK releases. No spam — just updates that matter.</p>
+        <div class="ml-embedded" data-form="6hKqhu"></div>
+    </section>
+    
+    <!-- Formats -->
+    <section class="formats-section">
+        <h2>Choose Your Format</h2>
+        <p class="formats-intro">From digital to collector's edition. Every format delivers the complete story.</p>
+        
+        <div class="formats-grid">
+            <div class="format-card">
+                <p class="format-tier">Tier 1 — Glimpse</p>
+                <h3 class="format-name">E-Book</h3>
+                <p class="format-price">$5.99</p>
+                <p class="format-desc">The complete digital novel. PDF, EPUB, MOBI.</p>
+                <a href="https://awasen.gumroad.com/l/blink" class="format-link">View</a>
+            </div>
+            
+            <div class="format-card">
+                <p class="format-tier">Tier 2 — Gaze</p>
+                <h3 class="format-name">Paperback</h3>
+                <p class="format-price">$14.99</p>
+                <p class="format-desc">The full novel in your hands. 360 pages.</p>
+                <a href="https://awasen.gumroad.com/l/blink-paper" class="format-link">View</a>
+            </div>
+            
+            <div class="format-card">
+                <p class="format-tier">Tier 3 — Sight</p>
+                <h3 class="format-name">Hardcover</h3>
+                <p class="format-price">$24.99</p>
+                <p class="format-desc">Premium hardcover edition.</p>
+                <a href="https://awasen.gumroad.com/l/blink-hard" class="format-link">View</a>
+            </div>
+            
+            <div class="format-card">
+                <p class="format-tier">Audio</p>
+                <h3 class="format-name">Audiobook</h3>
+                <p class="format-price">$15.99</p>
+                <p class="format-desc">Full audiobook. MP3 & M4B formats.</p>
+                <a href="https://awasen.gumroad.com/l/blink-audio" class="format-link">View</a>
+            </div>
+            
+            <div class="format-card featured">
+                <p class="format-tier">Tier 4 — Vision</p>
+                <h3 class="format-name">Collector's Edition</h3>
+                <p class="format-price">$59.99</p>
+                <p class="format-desc">Numbered hardcover, exclusive art, bonus story, $5 off Book 2.</p>
+                <a href="https://awasen.gumroad.com/l/blink-special" class="format-link">View</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About Awasen Oe</h2>
+            <p class="about-text">
+                Awasen Oe writes stories about freedom — the kind that costs something. 
+                BLINK is the first book in the Eternity Thread Saga, a high fantasy series 
+                exploring what it means to see the world as it truly is, and what you're 
+                willing to sacrifice once you do.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Awasen Oe. All rights reserved.</p>
+    </footer>
+</body>
+</html>
