@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Narrative — Awasen Oe</title>
+<meta name="description" content="Structural narrative diagnosis for games in production. Fixed scope, fixed fee, every claim sourced. Repair the story you have, or buy one already built.">
+<meta property="og:title" content="Game Narrative — Awasen Oe">
+<meta property="og:description" content="Bad narrative is the most expensive thing you ship.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://awasenoe.com/narrative/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0b; --dark:#121215; --darker:#0e0e10; --line:rgba(255,255,255,.07);
+  --pink:#e8a0a0; --coral:#d4736c; --blue:#4a9ead;
+  --cream:#f0ebe3; --gold:#c9a959;
+  --text:#d4d4d8; --text-muted:#71717a; --text-dim:#52525b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--black); color:var(--text);
+  font-family:'Crimson Pro',Georgia,serif; font-size:1.05rem; line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--gold); text-decoration:none}
+a:hover{color:var(--cream)}
+.wrap{max-width:820px; margin:0 auto; padding:0 1.5rem}
+
+/* masthead */
+.masthead{border-bottom:1px solid var(--line); padding:1.1rem 0; background:var(--dark); position:sticky; top:0; z-index:10}
+.masthead .wrap{display:flex; align-items:baseline; justify-content:space-between; gap:1rem}
+.wordmark{font-family:'Cinzel',serif; font-size:1rem; letter-spacing:.22em; color:var(--cream); text-transform:uppercase}
+.masthead nav a{font-size:.85rem; letter-spacing:.08em; color:var(--text-muted); margin-left:1.4rem}
+.masthead nav a:hover{color:var(--gold)}
+
+/* hero */
+.hero{padding:5.5rem 0 3.5rem; border-bottom:1px solid var(--line)}
+.eyebrow{
+  font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.32em;
+  color:var(--coral); text-transform:uppercase; margin-bottom:1.6rem
+}
+h1{
+  font-family:'Cinzel',serif; font-weight:600;
+  font-size:clamp(1.7rem,4.4vw,2.7rem); line-height:1.25;
+  color:var(--cream); margin:0 0 1.2rem
+}
+.subhead{font-size:1.15rem; color:var(--text-muted); margin:0 0 1.6rem; max-width:62ch}
+.subhead strong{color:var(--text); font-weight:400}
+
+/* sections */
+section{padding:3.5rem 0; border-bottom:1px solid var(--line)}
+h2{
+  font-family:'Cinzel',serif; font-weight:600; font-size:.78rem;
+  letter-spacing:.28em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 .5rem
+}
+.h2note{font-size:.9rem; color:var(--text-dim); margin:0 0 1.8rem; letter-spacing:.02em}
+h3{font-family:'Cinzel',serif; font-size:1rem; letter-spacing:.04em; color:var(--cream); margin:0 0 .5rem; line-height:1.4}
+p{margin:0 0 1.2rem; max-width:68ch}
+.lede{font-size:1.2rem; color:var(--cream); line-height:1.7}
+em{color:var(--cream); font-style:italic}
+
+/* source line */
+.src{
+  display:block; font-size:.8rem; line-height:1.6; color:var(--text-dim);
+  letter-spacing:.01em; margin-top:.45rem; max-width:70ch
+}
+.src a{color:var(--text-muted); border-bottom:1px solid rgba(255,255,255,.12)}
+.src a:hover{color:var(--gold)}
+
+/* ledger */
+.ledger{list-style:none; margin:0; padding:0}
+.ledger li{padding:1.5rem 0; border-top:1px solid var(--line)}
+.ledger li:first-child{border-top:none; padding-top:0}
+.ledger .fact{color:var(--cream); font-size:1.08rem; line-height:1.65; margin:0 0 .55rem; max-width:66ch}
+.ledger .fig{
+  font-family:'Cinzel',serif; font-size:.86rem; letter-spacing:.05em;
+  color:var(--coral); margin:0 0 .1rem; line-height:1.6; max-width:66ch
+}
+
+/* big stat */
+.stat{
+  display:flex; gap:1.6rem; align-items:baseline; flex-wrap:wrap;
+  padding:1.4rem 0; border-top:1px solid var(--line)
+}
+.stat:first-of-type{border-top:none}
+.stat .n{
+  font-family:'Cinzel',serif; font-size:clamp(1.8rem,5vw,2.6rem); font-weight:600;
+  color:var(--gold); line-height:1; min-width:5.5ch
+}
+.stat .l{flex:1 1 22ch; color:var(--text); font-size:1rem; line-height:1.6}
+.stat .l span{display:block; color:var(--text-dim); font-size:.85rem; margin-top:.2rem}
+
+/* concession block */
+.concede{
+  background:var(--darker); border:1px solid var(--line); border-left:2px solid var(--blue);
+  padding:1.8rem 1.9rem; margin:0 0 1.6rem
+}
+.concede h3{color:var(--blue); font-size:.76rem; letter-spacing:.24em; text-transform:uppercase; margin-bottom:1.1rem}
+.concede ul{margin:0; padding-left:1.15rem; max-width:66ch}
+.concede li{margin-bottom:1rem; line-height:1.7}
+.concede li:last-child{margin-bottom:0}
+.concede strong{color:var(--cream); font-weight:600}
+
+/* bar chart */
+.chart{margin:0 0 1.4rem; max-width:60ch}
+.bar{margin-bottom:1.15rem}
+.bar .k{display:flex; justify-content:space-between; gap:1rem; font-size:.92rem; margin-bottom:.4rem; line-height:1.5}
+.bar .k b{font-family:'Cinzel',serif; color:var(--cream); font-weight:600; font-size:.95rem; white-space:nowrap}
+.bar .t{background:rgba(255,255,255,.05); height:9px; overflow:hidden}
+.bar .f{height:100%; background:var(--coral)}
+.bar.alt .f{background:var(--gold)}
+.bar.low .f{background:var(--blue)}
+
+/* quotes */
+blockquote{
+  margin:0 0 1.5rem; padding:.2rem 0 .2rem 1.5rem;
+  border-left:2px solid var(--line); color:var(--text); font-size:1.02rem;
+  line-height:1.75; max-width:66ch; font-style:italic
+}
+blockquote p{margin:0 0 .8rem}
+blockquote p:last-of-type{margin-bottom:0}
+blockquote cite{
+  display:block; font-style:normal; font-size:.82rem; color:var(--text-dim);
+  margin-top:.7rem; letter-spacing:.02em
+}
+
+/* failure modes */
+.modes{list-style:none; margin:0; padding:0; counter-reset:m}
+.modes li{padding:1.7rem 0; border-top:1px solid var(--line)}
+.modes li:first-child{border-top:none; padding-top:0}
+.modes .m{
+  font-family:'Cinzel',serif; font-size:1.02rem; color:var(--cream);
+  margin:0 0 .6rem; line-height:1.45; counter-increment:m; max-width:60ch
+}
+.modes .m::before{
+  content:counter(m,decimal-leading-zero); color:var(--coral);
+  font-size:.72rem; letter-spacing:.2em; margin-right:.9rem; vertical-align:.15em
+}
+.modes p{font-size:1rem; margin:0 0 .8rem}
+.modes .tell{color:var(--gold); font-size:.98rem; margin:0}
+.modes .tell b{font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--text-dim); display:block; margin-bottom:.25rem; font-weight:400}
+
+/* test box */
+.test{
+  border:1px solid var(--gold); background:rgba(201,169,89,.045);
+  padding:1.9rem; margin:1.8rem 0 0
+}
+.test h3{color:var(--gold); font-size:.76rem; letter-spacing:.24em; text-transform:uppercase; margin-bottom:1rem}
+.test p{color:var(--cream); font-size:1.08rem; line-height:1.75; margin:0 0 1rem}
+.test p:last-child{margin-bottom:0}
+.test .then{color:var(--text); font-size:1rem}
+
+/* comparison */
+.compare{display:grid; gap:1.3rem; grid-template-columns:1fr; margin:0 0 1.5rem}
+@media(min-width:720px){.compare{grid-template-columns:1fr 1fr}}
+.compare div{background:var(--darker); border:1px solid var(--line); padding:1.4rem 1.5rem}
+.compare div:first-child{border-top:2px solid var(--blue)}
+.compare div:last-child{border-top:2px solid var(--coral)}
+.compare h4{
+  font-family:'Cinzel',serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+  margin:0 0 .9rem; color:var(--text-muted)
+}
+.compare p{font-size:.98rem; margin:0 0 .7rem; line-height:1.65}
+.compare p:last-child{margin-bottom:0}
+.compare b{color:var(--cream); font-weight:600}
+
+/* offers */
+.offers{display:grid; gap:1.5rem; grid-template-columns:1fr}
+@media(min-width:760px){.offers{grid-template-columns:1fr 1fr}}
+.offer{
+  background:var(--dark); border:1px solid var(--line);
+  border-top:2px solid var(--coral); padding:1.9rem
+}
+.offer:nth-child(2){border-top-color:var(--blue)}
+.offer .num{
+  display:block; font-family:'Cinzel',serif; font-size:.7rem;
+  letter-spacing:.3em; color:var(--text-muted); margin-bottom:.7rem
+}
+.offer p{font-size:1rem; margin:0 0 1rem}
+.offer p:last-child{margin-bottom:0}
+.offer ul{margin:0; padding-left:1.1rem; color:var(--text-muted); font-size:.96rem}
+.offer li{margin-bottom:.4rem}
+
+/* stance */
+.stance{
+  border-left:2px solid var(--gold); padding:.4rem 0 .4rem 1.6rem;
+  font-size:1.18rem; color:var(--cream); font-style:italic; max-width:64ch
+}
+
+/* record */
+.record{list-style:none; margin:0; padding:0}
+.record li{padding:1.1rem 0; border-top:1px solid var(--line); display:grid; gap:.15rem}
+.record li:first-child{border-top:none; padding-top:0}
+.record .name{font-family:'Cinzel',serif; color:var(--cream); font-size:1rem}
+.record .what{color:var(--text-muted); font-size:.98rem}
+
+/* terms */
+.terms{list-style:none; margin:0; padding:0; color:var(--text-muted)}
+.terms li{padding-left:1.3rem; position:relative; margin-bottom:.7rem; font-size:1rem}
+.terms li::before{content:"—"; position:absolute; left:0; color:var(--coral)}
+
+/* contact */
+.contact{padding:3.5rem 0 5rem; border-bottom:none}
+.email{
+  font-family:'Cinzel',serif; font-size:clamp(1.1rem,3vw,1.5rem);
+  letter-spacing:.04em; color:var(--gold); word-break:break-all
+}
+.sig{margin-top:1.6rem; color:var(--text-muted); font-size:.95rem}
+footer{border-top:1px solid var(--line); padding:1.6rem 0 2.2rem; background:var(--dark)}
+footer .wrap{display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap}
+footer p{margin:0; font-size:.82rem; color:var(--text-muted)}
+.notes{font-size:.78rem; color:var(--text-dim); line-height:1.7; margin-top:1.2rem; max-width:74ch}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <span class="wordmark">Awasen Oe</span>
+    <nav>
+      <a href="/">Fiction</a>
+      <a href="#work">Work With Me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <p class="eyebrow">Game Narrative</p>
+    <h1>Bad narrative is the most&nbsp;expensive thing you ship.</h1>
+    <p class="subhead">Not the writer. The writer is the cheapest line in the budget. <strong>Being wrong about the story</strong> is what costs a studio — and it is legible in preproduction, years before it shows up on an earnings call.</p>
+    <p class="subhead">Structural diagnosis for games in production. Fixed scope, fixed fee, every claim sourced.</p>
+  </div>
+
+  <!-- ========== LEDGER ========== -->
+  <section>
+    <h2>The Ledger</h2>
+    <p class="h2note">Primary sources only — securities filings, publisher statements, and on-the-record executive remarks. No estimates, no analyst models, no leaks.</p>
+
+    <ul class="ledger">
+      <li>
+        <p class="fact">EA told the SEC that Dragon Age reached roughly half the audience it had planned for.</p>
+        <p class="fig">“Dragon Age engaged approximately 1.5 million players during the quarter, down nearly 50% from the company’s expectations.”</p>
+        <span class="src">Electronic Arts, Form 8-K Exhibit 99.1, filed 22 January 2025. Note the metric EA chose: <em>engaged players</em>, which includes trials and subscription access. EA has never published a copies figure for this game, before or since. Its predecessor, from the same studio for the same publisher, passed 12 million.</span>
+      </li>
+      <li>
+        <p class="fact">BioWare was restructured ninety days after that quarter closed.</p>
+        <p class="fig">Active development ended; no story DLC; the game director departed; veteran writers terminated; remaining staff reassigned.</p>
+        <span class="src">Bloomberg (Jason Schreier), 11 June 2025. Reported, not company-confirmed — attributed here accordingly.</span>
+      </li>
+      <li>
+        <p class="fact">Concord was on sale for fourteen days.</p>
+        <p class="fig">Launched 23 August 2024. Sales halted and full refunds announced day 11. Servers off day 14. Studio permanently closed day 67.</p>
+        <span class="src">PlayStation.Blog, 3 September 2024 (Ryan Ellis, Game Director). Sony Interactive Entertainment, 29 October 2024 — Hermen Hulst, CEO, Studio Business Group: “we did not hit our targets with this title.”</span>
+      </li>
+      <li>
+        <p class="fact">Square Enix’s president called one game a downside risk to the entire company’s fiscal year, ten days after it shipped.</p>
+        <p class="fig">“Its sales have been lackluster… we see considerable downside risk to our FY2023/3 earnings.”</p>
+        <span class="src">Yosuke Matsuda, President, Square Enix Holdings — Outline of Financial Results Briefing, 3 February 2023. The developer, Luminous Productions, was dissolved into the parent company that May.</span>
+      </li>
+      <li>
+        <p class="fact">Unknown 9: Awakening peaked at 285 concurrent players on Steam. Ever.</p>
+        <p class="fig">Bandai Namco Europe cancelled every sequel and follow-up series in the franchise.</p>
+        <span class="src">PC Gamer, 21 November 2024, citing SteamDB. Cancellation statement, January 2025: “The performance of the release didn’t come near the company expectations… didn’t warrant any further exploration in this universe.”</span>
+      </li>
+      <li>
+        <p class="fact">Volition closed after thirty years, six days short of a year after the Saints Row reboot shipped.</p>
+        <p class="fig">Embracer’s Q2 filing said the money was fine. Its Q3 filing named the game among “titles released with a lower ROI.”</p>
+        <span class="src">Embracer Group interim reports, Q2 and Q3 FY22/23. Volition’s own closure statement attributes the shutdown to Embracer’s group-wide restructuring — SEK 15.6bn net debt after a verbally agreed $2bn investment collapsed — <em>not</em> to the game. That is the sequence. I am not asserting the causation, and nobody at Embracer has.</span>
+      </li>
+      <li>
+        <p class="fact">Ubisoft delayed its flagship franchise by three months to get out of the way of its own underperforming release.</p>
+        <p class="fig">“Initial sales proved softer than expected.” Shares hit their lowest level since 2015 in release week.</p>
+        <span class="src">Ubisoft business update, 25 September 2024. Assassin’s Creed Shadows moved from 15 November 2024 to 14 February 2025.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ========== CONCESSIONS ========== -->
+  <section>
+    <h2>What Cuts Against This Page</h2>
+    <p class="h2note">Before anything else, because you would find it anyway and then you would stop reading.</p>
+
+    <div class="concede">
+      <h3>The record, including the inconvenient parts</h3>
+      <ul>
+        <li><strong>The Last of Us Part II sold over ten million copies</strong> and won Game of the Year at nearly every ceremony that gives one. That is a publisher-confirmed figure — copies, sold through. It is not a flop and I will not call it one.</li>
+        <li><strong>Assassin’s Creed Shadows posted the second-highest day-one revenue in franchise history</strong>, absorbed eleven months of organised boycott, and Ubisoft has said it “delivered on its expectations.” A boycott moves a user score. It does not move a P&amp;L.</li>
+        <li><strong>Dragon Age: The Veilguard has an 82 on Metacritic with zero negative critic reviews</strong>, and its verified-purchase Steam score is <em>positive</em>. Its buyers are split. The internet is not. Those are different findings and they need different fixes.</li>
+        <li><strong>None of these games was broken at launch.</strong> Part II shipped clean and won an accessibility award. Concord ran fine. Veilguard’s PC port was solid. Every one of them failed at a layer no QA pass tests for.</li>
+        <li><strong>Roughly 45,000 games jobs were eliminated between 2022 and mid-2025,</strong> and by my own arithmetic on the public record, well under 1% of them are plausibly traceable to a content or story decision. One Swedish holding company’s debt problem accounts for 4,532 of them, 44 studios, and 80 cancelled projects. The industry’s contraction is a capital-markets story. Anyone selling you a simpler one is selling you something.</li>
+      </ul>
+    </div>
+
+    <p>I lead with this because a diagnosis is worth exactly what its worst claim is worth. If I will shade a number to win an argument on a marketing page, you have no reason to trust the note I hand you about your second act.</p>
+    <p class="stance">Every figure on this page is sourced. Where the record is contested, I say so. Where a number is a rumour, I don’t use it. I will do the same with your game — including the parts of the criticism that are wrong.</p>
+  </section>
+
+  <!-- ========== THE CUSTOMERS ========== -->
+  <section>
+    <h2>What Your Customers Actually Said</h2>
+    <p class="h2note">A census, not a sample — 9,285 English-language negative Steam reviews of one game, launch day through September 2026, harvested from Steam’s public review API and classified by keyword.</p>
+
+    <p>The loudest available explanation for these failures is a cultural one. It is worth checking against the people who bought the game and asked for their money back, because they wrote it all down.</p>
+
+    <div class="chart">
+      <div class="bar">
+        <div class="k"><span>Craft or technical complaint, no identity language at all</span><b>69.8%</b></div>
+        <div class="t"><div class="f" style="width:69.8%"></div></div>
+      </div>
+      <div class="bar alt">
+        <div class="k"><span>Identity language <em>alongside</em> a craft complaint</span><b>13.7%</b></div>
+        <div class="t"><div class="f" style="width:13.7%"></div></div>
+      </div>
+      <div class="bar low">
+        <div class="k"><span>Identity complaint and nothing else</span><b>1.6%</b></div>
+        <div class="t"><div class="f" style="width:1.6%"></div></div>
+      </div>
+    </div>
+    <span class="src">Dragon Age: The Veilguard, 9,285 unique English negative reviews over 40 characters, dated 31 October 2024 – 3 September 2026, retrieved from <a href="https://store.steampowered.com/appreviews/1845910?json=1">Steam’s appreviews endpoint</a>. Identity lexicon restricted to unambiguous terms; “politics,” “agenda” and “lecture” were excluded as too broad, which biases the count <em>upward</em>. Method and corpus available on request.</span>
+
+    <p style="margin-top:1.8rem">In the 600 most-upvoted negative reviews of four such games, the share complaining <em>only</em> about identity runs between zero and two-tenths of one percent. And roughly one in five reviewers who reach for the cultural explanation does so in order to reject it and redirect blame to the writing:</p>
+
+    <blockquote>
+      <p>One thing up front: not liking the game has NOTHING to do with it being “too woke.” [It] took everything that made the series so interesting — the conflict, the moral greyness, the choices that have consequences, the interactions with companions — and, well, deleted them. The Player Character is a hand-for-hire without any personal stakes in what is happening… the story has been filed down to absolute shallowness. All edges have been smoothed over until there’s nothing left of conflict and friction and ANYTHING that could be a tiny bit controversial.</p>
+      <cite>Steam user review, 3,441 helpful votes, 11 December 2024, 91 hours played</cite>
+    </blockquote>
+
+    <blockquote>
+      <p>There’s a persistent claim that the game is “woke” — when actually the politics of the game are those of a corporate diversity seminar at Goldman Sachs. The “woke” criticism dances around the real problem: the writing is tonally not conducive to fantasy. Your relationship to your companions is that of an earnest HR manager. This tonal problem defangs the world profoundly.</p>
+      <cite>Steam user review, 1,111 helpful votes, 14 February 2025</cite>
+    </blockquote>
+
+    <p>The single most-upvoted negative review in the corpus — 11,752 votes — was posted on launch day by someone two hours in. Everything they diagnosed was already in the build, and had been for years.</p>
+  </section>
+
+  <!-- ========== AUTOPSY ========== -->
+  <section>
+    <h2>The Autopsy</h2>
+    <p class="h2note">Seven failure modes, each one diagnosable from a script and a beat map before a line is recorded. This is the list I run against your game.</p>
+
+    <ol class="modes">
+      <li>
+        <p class="m">The functionary protagonist</p>
+        <p>A character built to occupy the role rather than to want something. Mamet’s memo to his writers is three questions per scene: <em>who wants what, what happens if they don’t get it, why now.</em> Andrew Stanton’s version is that every drawn character has “an inner motor… an itch they can’t scratch” — and, decisively, “these spines don’t always drive you to make the best choices.” A character built to be right cannot be driven into a wrong choice, and a character who cannot be wrong cannot generate a scene.</p>
+        <p class="tell"><b>The test</b>Five playtesters, an index card, hour twelve: write down what the protagonist wants. If the cards disagree, you don’t have a protagonist, you have a camera.</p>
+      </li>
+      <li>
+        <p class="m">Theme announced instead of paid for</p>
+        <p>A theme the player cannot disobey is a theme the player did not choose, and a player who did not choose it did not learn it. Kotaku on a game whose developer promised philosophical questions: “I never felt like the game asked me anything. Instead, it told me ‘brutality,’ repeatedly and louder, until by the end I couldn’t hear what it was trying to say at all.” That is from a review of a game that won Game of the Year.</p>
+        <p class="tell"><b>The test</b>Count the lines of UI and dialogue that explain a consequence the staging already showed. Every one is a scene that failed playtest and got a caption instead of a rewrite. That number is your narrative debt.</p>
+      </li>
+      <li>
+        <p class="m">Consequence without complexity</p>
+        <p>A decision with a consequence but no cost is a menu, not a dilemma. Branch counts are a production metric, not a drama metric — you can ship a thousand of them and never once make the player give something up.</p>
+        <p class="tell"><b>The test</b>One question per branch: what does the player lose that they wanted? If the answer is nothing, the branch is set dressing and the branching budget was spent on inventory.</p>
+      </li>
+      <li>
+        <p class="m">The sanded edge</p>
+        <p>Friction removed until nothing remains that could be argued with, and therefore nothing that could be felt. A cross-industry workgroup put it plainly last year: the industry’s fearful reflexes “aim to sand down the rough edges of creative work, creating homogenous and bland works that check all the boxes but are nevertheless insincere, uninspiring and uninterested.” The same group’s finding on the other side: “courage is a consistent factor of most hit titles.”</p>
+        <p class="tell"><b>The test</b>Name one scene where a companion’s conviction costs the player something they wanted. If no companion is structurally obliged to disagree, you removed the only engine a party game has.</p>
+      </li>
+      <li>
+        <p class="m">Authorship by reorg</p>
+        <p>No script holds one voice across five owners. One recent RPG passed through an executive producer, a creative director, a second executive producer, a production director, and a change of game director — plus a conversion to live service and back again — before anyone argued about a line of its dialogue. The seams always show in act two, because acts one and three get the executive attention.</p>
+        <p class="tell"><b>The test</b>In your own greenlight review: name the single person who owns the spine of this story, and give me the odds they are still here at lock. If you can’t, the rewrite is already scheduled. You just haven’t been told the date.</p>
+      </li>
+      <li>
+        <p class="m">The revision made out of fear</p>
+        <p>A note that begins “so we don’t get what they got” is a schedule risk, not a creative direction. A tonal rewrite ordered late, to avoid a reception rather than to serve a story, produces exactly the reception it was meant to prevent — because a register change needs time to propagate and never gets it.</p>
+        <p class="tell"><b>The test</b>Date every tonal change against your lock. Never accept one you cannot finish.</p>
+      </li>
+      <li>
+        <p class="m">The sequel that charges for affection</p>
+        <p>Continuity is not a liability to be capped. It is the only asset a sequel owns that a new IP cannot buy. When a studio caps imported player history to avoid contradiction risk, it has decided to spend nothing on the players who invested the most — and the player who remembers least becomes the player the game is built for. The two most-upvoted negative reviews of one reboot, posted the same day: “The developers literally did everything fans told them not to do,” and “Look how they massacred our boy.”</p>
+        <p class="tell"><b>The test</b>A three-question import screen is a balance-sheet decision wearing a design costume. Price it as one.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ========== THE VARIABLE ========== -->
+  <section>
+    <h2>The Variable Is Not Who Is In The Game</h2>
+    <p class="h2note">The most useful thing in this analysis, and the part that makes it a service rather than an opinion.</p>
+
+    <p>The same years that produced those failures produced <em>Baldur’s Gate 3</em>, <em>Clair Obscur: Expedition 33</em>, and <em>Metaphor: ReFantazio</em>. Every feature the failures were attacked for is present in the winners, usually more of it. Baldur’s Gate 3 has thirteen romance options with no gender gating, full pronoun and body decoupling, and a GLAAD award — and it is the most awarded game ever made. Metaphor is an explicit anti-bigotry text and took Best Narrative. So the demographics of a cast cannot be the variable. Something else separates these two lists, and it is structural.</p>
+
+    <div class="compare">
+      <div>
+        <h4>What the winners do</h4>
+        <p>The diverse element carries <b>structural weight and zero moral weight.</b> Cut it and the plot collapses — a boy’s apostasy <em>is</em> the cult plot; prejudice <em>is</em> a numeric obstacle to winning the election; the shadow self <em>is</em> the boss you cannot beat.</p>
+        <p>And yet no character’s identity is ever the source of their moral authority. Allegiance is earned the ordinary way: they want something concrete — find my mother, get off this mountain, save my marriage — and they pay for it.</p>
+      </div>
+      <div>
+        <h4>What the failures do</h4>
+        <p>Both terms inverted, exactly. The identity content is <b>structurally weightless</b> — delete it and the plot runs unchanged, which is the definition of decoration.</p>
+        <p>And it is <b>morally load-bearing</b> — it is the character’s claim on the audience’s approval and the game’s implicit case for its own virtue. An attribute stated for a moment of sympathy and then given nothing to do is a dropped setup. It reads as inventory rather than character, no matter what the attribute is.</p>
+      </div>
+    </div>
+
+    <p>That inversion is what audiences detect, and it is a craft fault rather than a political one: a want the writer would not let the character have, and a thesis the writer would not let the player argue with. It is also the charge that cannot be deflected — it says the writing <em>under-serves</em> the trait, which is the opposite of objecting to the trait’s presence.</p>
+
+    <div class="test">
+      <h3>The strike test</h3>
+      <p>Cut every line where a character’s identity is <em>discussed</em> rather than <em>exercised</em>. Then ask two questions.</p>
+      <p class="then"><strong>Does the plot still function?</strong> If yes, the identity was bolted on, and your audience already felt the join.<br>
+      <strong>Is the theme still arguable?</strong> If no, you didn’t write a story. You wrote a lecture, and you are about to charge sixty dollars for it.</p>
+      <p class="then">This takes an afternoon. It costs nothing. Almost nobody runs it.</p>
+    </div>
+  </section>
+
+  <!-- ========== ARITHMETIC ========== -->
+  <section>
+    <h2>The Arithmetic</h2>
+    <p class="h2note">Why the cheapest artefact in your building is the most expensive specification.</p>
+
+    <div class="stat">
+      <span class="n">$95k</span>
+      <span class="l">Cost of one finished minute of AAA mocap cinematic.<span>Derived from a reported $40M cinematics spend across “more than seven hours” of finished footage on a $315M production. Because the source says <em>more than</em>, this is a ceiling. Budget figure from the December 2023 Insomniac breach; cinematics figure reported by Matthew Ball, January 2024, who hedges it himself. I carry his hedge.</span></span>
+    </div>
+    <div class="stat">
+      <span class="n">0.007%</span>
+      <span class="l">What a Writers Guild scale polish costs against that same production budget.<span>$23,077 against $315,000,000. A full original screenplay with treatment is $173,215 — one minute and forty-nine seconds of finished cutscene. Union floors in a business that has a union; games writing has no collective agreement anywhere in the world, so treat this as an analogy, not a games rate.</span></span>
+    </div>
+    <div class="stat">
+      <span class="n">~47×</span>
+      <span class="l">Cost multiplier on three minutes of scene, rewritten on the page versus rebuilt after cinematic lock.<span><strong>This figure is constructed and I am showing you the components.</strong> Late leg: $95,238 × 3 = $285,714. Early leg: three senior narrative days at an assumed $2,000/day = $6,000. It excludes VO re-record, localisation, QA and schedule slip entirely. There is no published per-phase narrative cost figure anywhere in games — not in GDC talks, not in postmortems, not in any disclosure. Every version of this statistic in circulation is built the same way. Most don’t tell you.</span></span>
+    </div>
+
+    <p style="margin-top:2rem">A sharp CFO will push back, and they will be right: story is the cheapest thing in a game to <em>change</em> late. Words are free to retype. The expensive churn is engineering.</p>
+    <p>That is true, and it is not the argument. The argument is that a rotten premise silently mis-directs every expensive department for years — the level layouts built for a beat that gets cut, the mocap shot for a scene that no longer works, the systems built to serve a theme nobody in the building can state in one sentence. Bad craft does not stop launch week; marketing buys launch week. It eats the DLC, the sequel, the franchise, and the studio.</p>
+    <p>Sony’s President and COO named the process failure on the record after the shortest-lived first-party launch in the company’s history: <em>“We probably need to have a lot of gates, including user testing or internal evaluation… we should have done those gates much earlier than we did. Also, we have a siloed organisation.”</em></p>
+    <span class="src">Hiroki Totoki, Sony Group Q2 FY2024 earnings call, 8 November 2024, and Sony’s own published Q&amp;A summary the same day.</span>
+
+    <p style="margin-top:1.8rem"><em>Nobody knows anything.</em> Goldman’s line is the most famous maxim in entertainment and a direct refutation of anyone selling insurance against commercial failure — so let me be exact about what is on offer. I cannot tell you what will succeed. Nobody can, and the ones who say otherwise are the reason your last focus group cost six figures and produced a cast nobody remembers.</p>
+    <p>I can tell you, in week eight rather than year four, that your protagonist has no want, that your theme is being announced rather than dramatised, and that your sequel is charging the audience for the privilege of being corrected. Those are diagnosable. Whether the fix sells is not, and saying so is the only reason to believe the rest of this page.</p>
+  </section>
+
+  <!-- ========== OFFERS ========== -->
+  <section id="work">
+    <h2>Two Ways To Work</h2>
+    <p class="h2note">Fixed scope. Fixed fee. Agreed in writing before anything starts.</p>
+    <div class="offers">
+
+      <article class="offer">
+        <span class="num">01 / Repair</span>
+        <h3>Fix the story you have</h3>
+        <p>A fixed-fee structural pass under NDA. I read the build, the script and the beat map, then return a written diagnosis of where the structure gives out and the shortest set of changes that repair it — ranked against your remaining milestones, with the ones you can no longer afford marked as such.</p>
+        <p>Structure first, dialogue last. I built <strong>Splice</strong>, a beat-first branching-dialogue editor that exports to Twine, so your team can walk a repair before anyone books a booth.</p>
+        <ul>
+          <li>Written diagnosis, yours to keep</li>
+          <li>Every claim sourced; unprovable ones marked unprovable</li>
+          <li>Changes ranked against your schedule</li>
+          <li>Rewrite optional, quoted separately</li>
+        </ul>
+      </article>
+
+      <article class="offer">
+        <span class="num">02 / Original</span>
+        <h3>Buy one already built</h3>
+        <p>Premise, world, cast, thesis and a full beat map — finished before you read a word. You judge the material itself rather than a pitch, so the concept risk sits on my time instead of your budget.</p>
+        <p>Terms are set up front: bought outright or work-for-hire. I either stay through production to keep it coherent, or hand it over clean.</p>
+        <ul>
+          <li>Complete material, not a pitch deck</li>
+          <li>One author, one spine, one voice</li>
+          <li>Outright purchase or work-for-hire</li>
+          <li>Optional continuity support in production</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ========== POSITION ========== -->
+  <section>
+    <h2>Position</h2>
+    <p class="stance">The vision stays yours — the one you started with, or the one you chose to buy. My job is to make it land harder, not to aim it somewhere you never pointed it.</p>
+    <p style="margin-top:1.6rem">Two things follow from that, and they are the whole method. I do not attack the people who made your game; I attack the org chart that produced it, because the org chart is the thing you can actually change. And I will not hand you an explanation the numbers cannot carry — not for your competitors, and not for you.</p>
+  </section>
+
+  <!-- ========== RECORD ========== -->
+  <section>
+    <h2>Track Record</h2>
+    <ul class="record">
+      <li>
+        <span class="name"><a href="https://anarchygames.org/in-the-black-game-anarchygames/">In the Black</a></span>
+        <span class="what">Two-player space combat. Publicly playable — online multiplayer, procedural ship tiers, original score.</span>
+      </li>
+      <li>
+        <span class="name">Advent</span>
+        <span class="what">Asymmetric 4X, 2–5 players. Eleven species and roughly 190 cards written to one locked tone, balance-validated against a headless simulator I wrote.</span>
+      </li>
+      <li>
+        <span class="name"><a href="https://anarchygames.org/magazine/">Cassette Future Magazine</a></span>
+        <span class="what">Ongoing worldbuilding publication set in 2935. Serial characters, species roster, documentary script.</span>
+      </li>
+      <li>
+        <span class="name"><a href="/">BLINK — The Eternity Thread Saga</a></span>
+        <span class="what">Book one of a high fantasy trilogy. Long-form prose and series architecture.</span>
+      </li>
+      <li>
+        <span class="name">Splice</span>
+        <span class="what">Beat-first branching-dialogue editor, built because the existing tools make you build outward from a blank node instead of laying structure first.</span>
+      </li>
+      <li>
+        <span class="name">Unannounced action title</span>
+        <span class="what">Original third-person action game in development. Thesis-driven. Details under wraps.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ========== TERMS ========== -->
+  <section>
+    <h2>Terms</h2>
+    <ul class="terms">
+      <li>Nothing confidential moves before an NDA.</li>
+      <li>The diagnosis is quoted before I read a line. No free spec, no discovery call.</li>
+      <li>Fixed scope and fixed fee, agreed in writing before work starts.</li>
+      <li>Work stays inside your canon and your ship date.</li>
+      <li>I do not name your team in anything I write, during the engagement or after it.</li>
+    </ul>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <h2>Enquiries</h2>
+    <p><strong>Repair:</strong> send the note you keep getting back, or the scene nobody can fix.</p>
+    <p><strong>Original:</strong> ask, and the material comes to you to read on the same terms.</p>
+    <p class="email"><a href="mailto:Awasen@awasenoe.com">Awasen@awasenoe.com</a></p>
+    <p class="sig">Awasen Oe — game narrative &amp; fiction.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Awasen Oe</p>
+    <p><a href="/">Fiction</a> &nbsp;·&nbsp; <a href="mailto:Awasen@awasenoe.com">Awasen@awasenoe.com</a></p>
+  </div>
+  <div class="wrap">
+    <p class="notes">Figures retrieved and verified 3 September 2026. Securities filings and publisher statements are cited to the primary document; reported figures are attributed to the outlet that reported them. Store review counts and concurrent-player figures drift continuously and are date-stamped accordingly. Metacritic user scores are not cited anywhere on this page: they require no proof of purchase, and for at least one game named here the user score and the ownership-gated store score point in opposite directions.</p>
+  </div>
+</footer>
+
+</body>
+</html>
