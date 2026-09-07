@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="BLINK">
+  <!-- An obsidian shard with one spectrum sliver still burning in it.
+       Colour values mirror assets/css/tokens.css. They are repeated here only
+       because an external favicon cannot read the site's custom properties. -->
+  <defs>
+    <clipPath id="shard">
+      <path d="M16 1.8 25.6 12 21.8 30.2H10.2L6.4 12Z"/>
+    </clipPath>
+    <linearGradient id="spectrum" gradientUnits="userSpaceOnUse" x1="6" y1="24" x2="26" y2="19">
+      <stop offset="0" stop-color="#ff4d6d"/>
+      <stop offset="0.2" stop-color="#ff9a3c"/>
+      <stop offset="0.4" stop-color="#ffd93d"/>
+      <stop offset="0.6" stop-color="#4cd964"/>
+      <stop offset="0.8" stop-color="#34a0ff"/>
+      <stop offset="1" stop-color="#a06cff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="32" height="32" rx="7" fill="#f6efe1"/>
+
+  <g clip-path="url(#shard)">
+    <rect width="32" height="32" fill="#06070a"/>
+    <path d="M16 1.8 6.4 12l3.8 18.2H16Z" fill="#1a212c"/>
+    <path d="M4 22.6 28 16.8v4.8L4 27.4Z" fill="url(#spectrum)"/>
+  </g>
+
+  <path d="M16 1.8 25.6 12 21.8 30.2H10.2L6.4 12Z" fill="none" stroke="#241d12" stroke-width="1.4" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,391 @@
+{
+  "terms": [
+    {
+      "match": "Pirates of Eleutheria",
+      "slug": "eleutheria",
+      "title": "Eleutheria",
+      "kind": "place",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": true
+    },
+    {
+      "match": "The Thread Dimension",
+      "slug": "the-thread-dimension",
+      "title": "The Thread Dimension",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Vessel People",
+      "slug": "the-vessel-people",
+      "title": "The Vessel People",
+      "kind": "faction",
+      "reveals_at": 15,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "the Dragon Slayer",
+      "slug": "issah",
+      "title": "Issah",
+      "kind": "character",
+      "reveals_at": 2,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Green-Thumbs",
+      "slug": "the-green-thumbs",
+      "title": "The Green-Thumbs",
+      "kind": "faction",
+      "reveals_at": 20,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Golden Path",
+      "slug": "the-golden-path",
+      "title": "The Golden Path",
+      "kind": "concept",
+      "reveals_at": 10,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Still Point",
+      "slug": "the-still-point",
+      "title": "The Still Point",
+      "kind": "concept",
+      "reveals_at": 8,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "King Lachesis",
+      "slug": "lachesis",
+      "title": "King Lachesis",
+      "kind": "character",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": true
+    },
+    {
+      "match": "The Homunculi",
+      "slug": "the-homunculi",
+      "title": "The Homunculi",
+      "kind": "creature",
+      "reveals_at": 7,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Everwind",
+      "slug": "the-everwind",
+      "title": "The Everwind",
+      "kind": "thing",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Unicorns",
+      "slug": "the-unicorns",
+      "title": "The Unicorns",
+      "kind": "faction",
+      "reveals_at": 5,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "the princess",
+      "slug": "eri",
+      "title": "Eri",
+      "kind": "character",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": false
+    },
+    {
+      "match": "the tapestry",
+      "slug": "the-thread-dimension",
+      "title": "The Thread Dimension",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": false
+    },
+    {
+      "match": "The Obelisk",
+      "slug": "the-obelisk",
+      "title": "The Obelisk",
+      "kind": "place",
+      "reveals_at": 3,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Turning",
+      "slug": "the-turning",
+      "title": "The Turning",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "Eleutheria",
+      "slug": "eleutheria",
+      "title": "Eleutheria",
+      "kind": "place",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Queen Hren",
+      "slug": "hren",
+      "title": "Queen Hren",
+      "kind": "character",
+      "reveals_at": 4,
+      "loose": false,
+      "ci": true
+    },
+    {
+      "match": "The Anchor",
+      "slug": "the-anchor",
+      "title": "The Anchor",
+      "kind": "thing",
+      "reveals_at": 10,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "Void Vials",
+      "slug": "void-vials",
+      "title": "Void Vials",
+      "kind": "thing",
+      "reveals_at": 9,
+      "loose": false,
+      "ci": true
+    },
+    {
+      "match": "homunculus",
+      "slug": "the-homunculi",
+      "title": "The Homunculi",
+      "kind": "creature",
+      "reveals_at": 7,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "man-beasts",
+      "slug": "the-homunculi",
+      "title": "The Homunculi",
+      "kind": "creature",
+      "reveals_at": 7,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "The Blink",
+      "slug": "the-blink",
+      "title": "The Blink",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "The Drain",
+      "slug": "the-drain",
+      "title": "The Drain",
+      "kind": "concept",
+      "reveals_at": 5,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "the Queen",
+      "slug": "hren",
+      "title": "Queen Hren",
+      "kind": "character",
+      "reveals_at": 4,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "void vial",
+      "slug": "void-vials",
+      "title": "Void Vials",
+      "kind": "thing",
+      "reveals_at": 9,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Malachar",
+      "slug": "malachar",
+      "title": "Malachar",
+      "kind": "creature",
+      "reveals_at": 6,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Nephimhr",
+      "slug": "nephimhr",
+      "title": "Nephimhr",
+      "kind": "place",
+      "reveals_at": 15,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "blinking",
+      "slug": "the-blink",
+      "title": "The Blink",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "the King",
+      "slug": "lachesis",
+      "title": "King Lachesis",
+      "kind": "character",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "the void",
+      "slug": "void-vials",
+      "title": "Void Vials",
+      "kind": "thing",
+      "reveals_at": 9,
+      "loose": true,
+      "ci": false
+    },
+    {
+      "match": "Malachr",
+      "slug": "malachar",
+      "title": "Malachar",
+      "kind": "creature",
+      "reveals_at": 6,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "blinked",
+      "slug": "the-blink",
+      "title": "The Blink",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "unicorn",
+      "slug": "the-unicorns",
+      "title": "The Unicorns",
+      "kind": "faction",
+      "reveals_at": 5,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Burill",
+      "slug": "burill",
+      "title": "Burill",
+      "kind": "character",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Kraeta",
+      "slug": "kraeta",
+      "title": "Kraeta",
+      "kind": "place",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Pretue",
+      "slug": "hren",
+      "title": "Queen Hren",
+      "kind": "character",
+      "reveals_at": 4,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Rhodes",
+      "slug": "rhodes",
+      "title": "Rhodes",
+      "kind": "creature",
+      "reveals_at": 5,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Heron",
+      "slug": "heron",
+      "title": "Heron",
+      "kind": "creature",
+      "reveals_at": 15,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Issah",
+      "slug": "issah",
+      "title": "Issah",
+      "kind": "character",
+      "reveals_at": 2,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Mello",
+      "slug": "mello",
+      "title": "Mello",
+      "kind": "character",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Urmez",
+      "slug": "urmez",
+      "title": "Urmez",
+      "kind": "character",
+      "reveals_at": 6,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Aris",
+      "slug": "aris",
+      "title": "Aris",
+      "kind": "character",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Eri",
+      "slug": "eri",
+      "title": "Eri",
+      "kind": "character",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    }
+  ]
+}
