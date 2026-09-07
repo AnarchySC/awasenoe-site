@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BLINK default share card. 1200x630, the standard Open Graph frame.
+
+  This is the DESIGN REFERENCE and the fallback artwork. Most social
+  platforms will not rasterise an SVG for og:image, so the JPEG built from
+  this composition is the file that actually gets served; this one stays as
+  the source of truth for the layout, the colours and the proportions.
+
+  Rules it holds to:
+    - Obsidian ground (#0a0a0b), i.e. the thread veil, not the surface veil.
+    - One spectrum sliver is the only colour on the card. Everything else is
+      the neutral thread-veil ink ramp.
+    - No photograph, no stock imagery, no cover mockup.
+    - Legible as a 300px-wide thumbnail: the wordmark is ~48px tall at that
+      size, and nothing smaller than the wordmark carries meaning.
+    - Every claim on it is verifiable: series name, book number, pen name.
+      No review counts, no ratings, no awards, no price.
+
+  Colours are the thread-veil tokens from CONTRACT.md section 2. If
+  assets/css/tokens.css changes, change them here too - an SVG cannot read a
+  CSS custom property from another file.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="630" viewBox="0 0 1200 630"
+     role="img" aria-labelledby="og-title og-desc">
+
+  <title id="og-title">BLINK - Book One of the Eternity Thread Saga by Awasen Oe</title>
+  <desc id="og-desc">The word BLINK set large in a serif on a black ground, with the series name above it and a thin band of spectrum colour below.</desc>
+
+  <defs>
+    <!-- The single spectrum sliver: bloom-1 through bloom-6, CONTRACT section 2. -->
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.00" stop-color="#ff4d6d"/>
+      <stop offset="0.20" stop-color="#ff9a3c"/>
+      <stop offset="0.40" stop-color="#ffd93d"/>
+      <stop offset="0.60" stop-color="#4cd964"/>
+      <stop offset="0.80" stop-color="#34a0ff"/>
+      <stop offset="1.00" stop-color="#a06cff"/>
+    </linearGradient>
+
+    <!-- Depth only. Near-black to black, so it adds no second colour. -->
+    <radialGradient id="ground" cx="0.5" cy="0.46" r="0.72">
+      <stop offset="0" stop-color="#14161d"/>
+      <stop offset="1" stop-color="#0a0a0b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ground. Painted twice so the card is never transparent if the
+       gradient fails to resolve in a naive rasteriser. -->
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect width="1200" height="630" fill="url(#ground)"/>
+
+  <!-- Hairline frame. The rule token, thread veil. -->
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#1a212c" stroke-width="2"/>
+
+  <!-- Series. The ink-soft token. -->
+  <text x="600" y="222" text-anchor="middle"
+        font-family="Cinzel, 'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-size="32" font-weight="400" letter-spacing="10" fill="#8a95a8">ETERNITY THREAD SAGA</text>
+
+  <!-- Wordmark. The ink token. -->
+  <text x="600" y="382" text-anchor="middle"
+        font-family="Cinzel, 'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-size="190" font-weight="600" letter-spacing="18" fill="#dfe5ee">BLINK</text>
+
+  <!-- The sliver. The only colour on the card. -->
+  <rect x="340" y="422" width="520" height="10" rx="5" fill="url(#spectrum)"/>
+
+  <!-- Attribution. The ink-soft token. -->
+  <text x="600" y="494" text-anchor="middle"
+        font-family="Cinzel, 'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+        font-size="26" font-weight="400" letter-spacing="4" fill="#8a95a8">BOOK ONE &#183; AWASEN OE</text>
+</svg>
