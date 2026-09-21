@@ -19,6 +19,15 @@
       "ci": true
     },
     {
+      "match": "Blightstone Castle",
+      "slug": "obissian-castle",
+      "title": "Obissian Castle",
+      "kind": "concept",
+      "reveals_at": 2,
+      "loose": false,
+      "ci": true
+    },
+    {
       "match": "The Vessel People",
       "slug": "the-vessel-people",
       "title": "The Vessel People",
@@ -37,12 +46,39 @@
       "ci": true
     },
     {
+      "match": "The Black Castle",
+      "slug": "obissian-castle",
+      "title": "Obissian Castle",
+      "kind": "concept",
+      "reveals_at": 2,
+      "loose": true,
+      "ci": true
+    },
+    {
       "match": "The Green-Thumbs",
       "slug": "the-green-thumbs",
       "title": "The Green-Thumbs",
       "kind": "faction",
       "reveals_at": 20,
       "loose": true,
+      "ci": true
+    },
+    {
+      "match": "dragon territory",
+      "slug": "digryph",
+      "title": "Digryph",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Obissian Castle",
+      "slug": "obissian-castle",
+      "title": "Obissian Castle",
+      "kind": "concept",
+      "reveals_at": 2,
+      "loose": false,
       "ci": true
     },
     {
@@ -80,6 +116,15 @@
       "reveals_at": 7,
       "loose": true,
       "ci": true
+    },
+    {
+      "match": "northern wood",
+      "slug": "digryph",
+      "title": "Digryph",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
     },
     {
       "match": "The Everwind",
@@ -190,6 +235,15 @@
       "ci": false
     },
     {
+      "match": "Scavenger",
+      "slug": "gregor",
+      "title": "Gregor",
+      "kind": "character",
+      "reveals_at": 2,
+      "loose": false,
+      "ci": false
+    },
+    {
       "match": "The Blink",
       "slug": "the-blink",
       "title": "The Blink",
@@ -244,6 +298,15 @@
       "ci": false
     },
     {
+      "match": "The Scav",
+      "slug": "gregor",
+      "title": "Gregor",
+      "kind": "character",
+      "reveals_at": 2,
+      "loose": true,
+      "ci": true
+    },
+    {
       "match": "blinking",
       "slug": "the-blink",
       "title": "The Blink",
@@ -268,6 +331,15 @@
       "kind": "thing",
       "reveals_at": 9,
       "loose": true,
+      "ci": false
+    },
+    {
+      "match": "Digryph",
+      "slug": "digryph",
+      "title": "Digryph",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": false,
       "ci": false
     },
     {
@@ -303,6 +375,15 @@
       "title": "Burill",
       "kind": "character",
       "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Gregor",
+      "slug": "gregor",
+      "title": "Gregor",
+      "kind": "character",
+      "reveals_at": 2,
       "loose": false,
       "ci": false
     },
@@ -375,6 +456,15 @@
       "title": "Aris",
       "kind": "character",
       "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "Scav",
+      "slug": "gregor",
+      "title": "Gregor",
+      "kind": "character",
+      "reveals_at": 2,
       "loose": false,
       "ci": false
     },
