@@ -64,6 +64,24 @@
       "ci": true
     },
     {
+      "match": "The Kraetan Year",
+      "slug": "kraetan-year",
+      "title": "The Kraetan Year",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": true,
+      "ci": true
+    },
+    {
+      "match": "day without form",
+      "slug": "kraetan-year",
+      "title": "The Kraetan Year",
+      "kind": "concept",
+      "reveals_at": 1,
+      "loose": false,
+      "ci": false
+    },
+    {
       "match": "dragon territory",
       "slug": "digryph",
       "title": "Digryph",
@@ -190,9 +208,9 @@
       "ci": false
     },
     {
-      "match": "Queen Hren",
-      "slug": "hren",
-      "title": "Queen Hren",
+      "match": "Queen Rhen",
+      "slug": "rhen",
+      "title": "Queen Rhen",
       "kind": "character",
       "reveals_at": 4,
       "loose": false,
@@ -263,8 +281,8 @@
     },
     {
       "match": "the Queen",
-      "slug": "hren",
-      "title": "Queen Hren",
+      "slug": "rhen",
+      "title": "Queen Rhen",
       "kind": "character",
       "reveals_at": 4,
       "loose": true,
@@ -398,8 +416,8 @@
     },
     {
       "match": "Pretue",
-      "slug": "hren",
-      "title": "Queen Hren",
+      "slug": "rhen",
+      "title": "Queen Rhen",
       "kind": "character",
       "reveals_at": 4,
       "loose": false,
@@ -411,6 +429,15 @@
       "title": "Rhodes",
       "kind": "creature",
       "reveals_at": 5,
+      "loose": false,
+      "ci": false
+    },
+    {
+      "match": "voidek",
+      "slug": "kraetan-year",
+      "title": "The Kraetan Year",
+      "kind": "concept",
+      "reveals_at": 1,
       "loose": false,
       "ci": false
     },
